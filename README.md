@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# ott tv interface - TypeScript React Uygulaması
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu proje, TypeScript kullanılarak geliştirilmiş bir React uygulamasıdır. Bu belgede, projenin nasıl kurulacağı ve başlatılacağı hakkında bilgi verilmektedir.
 
-## Available Scripts
+## Başlarken
 
-In the project directory, you can run:
+Projeyi yerel ortamda çalıştırmak için aşağıdaki adımları takip ediniz.
 
-### `npm start`
+### Gereksinimler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Bu projeyi çalıştırmak için bilgisayarınızda Node.js ve npm (Node Paket Yöneticisi) yüklü olmalıdır. Node.js'i [buradan](https://nodejs.org/) indirebilirsiniz.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Kurulum
 
-### `npm test`
+Projeyi klonladıktan sonra, terminalde aşağıdaki komutu çalıştırarak gerekli bağımlılıkları yükleyin:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-### `npm run build`
+### Çevre Değişkenleri
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Projeyi başlatmadan önce, projenin kök dizininde bir `.env` dosyası oluşturmanız ve TMDB API anahtarını eklemeniz gerekmektedir.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`.env` dosyasına aşağıdaki satırı ekleyin:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+REACT_APP_API_KEY=buraya_tmdb_api_anahtarınızı_girin
+```
 
-### `npm run eject`
+TMDB API anahtarını almak için [The Movie Database (TMDB)](https://www.themoviedb.org/) web sitesine gidip kayıt olmanız ve geliştirici hesabı oluşturarak API anahtarını almanız gerekmektedir.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Projeyi Başlatma
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aşağıdaki komutu kullanarak uygulamayı geliştirme modunda başlatabilirsiniz:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Bu komut, uygulamayı `http://localhost:3000` adresinde çalıştırır. Tarayıcınızda bu adresi ziyaret ederek uygulamanızı görebilirsiniz.
 
-## Learn More
+## TMDB API Anahtarı Alma
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. [TMDB web sitesine](https://www.themoviedb.org/) gidin ve kayıt olun.
+2. Hesabınıza giriş yapın ve "API" bölümüne gidin.
+3. Yeni bir API anahtarı oluşturarak bu anahtarı `.env` dosyanıza ekleyin.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Daha Fazla Bilgi
+
+Projeye katkıda bulunmak veya herhangi bir sorunuz olursa lütfen geliştirici belgelerini inceleyin ya da bizimle iletişime geçin.
