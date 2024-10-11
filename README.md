@@ -45,7 +45,3 @@ Bu komut, uygulamayı `http://localhost:3000` adresinde çalıştırır. Tarayı
 1. [TMDB web sitesine](https://www.themoviedb.org/) gidin ve kayıt olun.
 2. Hesabınıza giriş yapın ve "API" bölümüne gidin.
 3. Yeni bir API anahtarı oluşturarak bu anahtarı `.env` dosyanıza ekleyin.
-
-## Daha Fazla Bilgi
-
-Projeye katkıda bulunmak veya herhangi bir sorunuz olursa lütfen geliştirici belgelerini inceleyin ya da bizimle iletişime geçin.
