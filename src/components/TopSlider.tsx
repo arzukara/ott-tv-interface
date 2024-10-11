@@ -44,7 +44,6 @@ const TopSlider: React.FC<TopSliderProps> = ({ items, isActive, onSelect }) => {
         {items.map((item) => (
           <div
             key={item.id}
-            className="item"
             tabIndex={0}
             onClick={() => onSelect(item)}
           >

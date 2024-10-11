@@ -30,13 +30,13 @@
 
 .backdropitem {
   margin-right: 10px;
-  position: relative;
-  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .backdropitem:focus, .backdropitem:hover {
   outline: none;
-  gap: 10px;
+  margin-right: 10px;
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }

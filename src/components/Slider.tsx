@@ -22,27 +22,11 @@ const Slider: React.FC<SliderProps> = ({ title, items, isActive ,onSelect}) => {
       if (event.key === 'ArrowRight' && currentIndex < itemElements.length - 1) {
         const nextElement = itemElements[currentIndex + 1] as HTMLElement;
         nextElement.focus();
-        scrollIntoView(nextElement);
       } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
         const prevElement = itemElements[currentIndex - 1] as HTMLElement;
         prevElement.focus();
-        scrollIntoView(prevElement);
       } else if (event.key === "Enter" && currentIndex !== -1) {
         onSelect(items[currentIndex]);
-      }
-    };
-
-    const scrollIntoView = (element: HTMLElement) => {
-      if (!sliderRef.current) return;
-      const sliderLeft = sliderRef.current.scrollLeft;
-      const sliderRight = sliderLeft + sliderRef.current.clientWidth;
-      const elementLeft = element.offsetLeft;
-      const elementRight = elementLeft + element.clientWidth;
-
-      if (elementLeft < sliderLeft) {
-        sliderRef.current.scrollLeft = elementLeft;
-      } else if (elementRight > sliderRight) {
-        sliderRef.current.scrollLeft = elementRight - sliderRef.current.clientWidth;
       }
     };
 
@@ -57,7 +41,6 @@ const Slider: React.FC<SliderProps> = ({ title, items, isActive ,onSelect}) => {
         {items.map((item) => (
            <div
            key={item.id}
-           className="item"
            tabIndex={0}
            onClick={() => onSelect(item)}
          >
